@@ -1,2 +1,2 @@
 # wffscamp
-The Whitfield Foundation For Success Summer Program Files
+## The Whitfield Foundation For Success Summer Program Files
