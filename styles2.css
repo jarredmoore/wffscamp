@@ -65,6 +65,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: zoom-out;
   }
   
   #lightbox-caption {
@@ -77,12 +78,51 @@ body {
     font-size: 16px;
   }
   
-  #lightbox .close {
+  #lightbox .close,
+  #lightbox .prev,
+  #lightbox .next,
+  #lightbox .fullscreen {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
     font-size: 30px;
     cursor: pointer;
+    user-select: none;
+    padding: 5px;
+  }
+  
+  #lightbox .close {
+    right: 20px;
+  }
+  
+  #lightbox .prev {
+    left: 20px;
+  }
+  
+  #lightbox .next {
+    right: 20px;
+  }
+  
+  #lightbox .fullscreen {
+    left: 20px;
+  }
+  
+  .fullscreen {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    #lightbox img {
+      max-width: 95%;
+    }
+  
+    .fullscreen {
+      display: block;
+    }
   }
   
