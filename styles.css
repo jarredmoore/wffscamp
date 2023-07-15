@@ -1,3 +1,4 @@
+/* Sidebar and main content styles (same for all pages) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,11 +14,13 @@ body {
     top: 0;
     left: 0;
     padding: 20px;
+    transition: width 0.3s ease;
   }
   
   .sidebar-logo {
     text-align: center;
     padding: 10px 0;
+    cursor: pointer;
   }
   
   .sidebar h2 {
@@ -63,25 +66,21 @@ body {
     color: #666;
   }
   
-  ul {
-    list-style: none;
-    padding: 0;
+  /* Collapsed sidebar style */
+  #sidebar.collapsed {
+    width: 50px;
   }
   
-  ul li {
-    margin-bottom: 10px;
+  #sidebar.collapsed .sidebar-logo h2 {
+    display: none;
   }
   
-  ul li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f1f1f1;
+  #sidebar.collapsed .sidebar-nav li a {
+    padding: 10px;
+    text-align: center;
   }
   
-  ul li a:hover {
-    background-color: #ddd;
+  #sidebar.collapsed .sidebar-nav li a:hover {
+    background-color: #333;
   }
   
