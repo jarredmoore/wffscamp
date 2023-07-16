@@ -64,56 +64,36 @@
     </nav>  
   <h1>Picture Gallery</h1>
   
-  <div class="gallery">
-    <div class="picture" onclick="openLightbox('image1.jpg', 'Picture 1: Description of the first picture.')">
-      <img src="Images/_DSC8740.JPG" alt="Picture 1">
-      <div class="caption">Picture 1</div>
-    </div>
-    <div class="picture" onclick="openLightbox('image2.jpg', 'Picture 2: Description of the second picture.')">
-      <img src="Images/_DSC9209.JPG" alt="Picture 2">
-      <div class="caption">Picture 2</div>
-    </div>
-    <div class="picture" onclick="openLightbox('image3.jpg', 'Picture 3: Description of the third picture.')">
-      <img src="Images/_DSC9317.JPG" alt="Picture 3">
-      <div class="caption">Picture 3</div>
-    </div>
-    <!-- Add more picture divs here -->
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Gallery With Horizontal Scroll</h2>
+<p>Use the horizontal scrollbar to see the other images.</p>
 
 <div class="scroll-container">
-  <img src="Images/_DSC0415.JPG" alt="Cinque Terre">
-  <img src="Images/_DSC0417.JPG" alt="Forest">
-  <img src="Images/_DSC0419.JPG" alt="Northern Lights">
-  <img src="Images/_DSC0420.JPG" alt="Mountains">
+  <img src="Images/_DSC8394.JPG" alt="Cinque Terre" width="600" height="400">
+  <img src="Images/_DSC8398.JPG" alt="Forest" width="600" height="400">
+  <img src="Images/_DSC8412.JPG" alt="Northern Lights" width="600" height="400">
+  <img src="Images/_DSC8531.JPG" alt="Mountains" width="600" height="400">
 </div>
 
+<p>Note that the images are of same size.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <div id="lightbox" onclick="closeLightbox()">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <span class="prev" onclick="changeLightboxImage(-1)">&#10094;</span>
-    <span class="next" onclick="changeLightboxImage(1)">&#10095;</span>
-    <img id="lightbox-image" src="" alt="">
-    <div id="lightbox-caption"></div>
-    <span class="fullscreen" onclick="toggleFullscreen()">&#10064;</span>
-  </div>
-  
 </body>
 </html>
