@@ -18,7 +18,7 @@ h1 {
 
 .picture {
   position: relative;
-  width: 100%;
+  width: 600px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
